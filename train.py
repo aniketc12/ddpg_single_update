@@ -37,7 +37,7 @@ for episode in range(1):
     for i in range(800):
         print(step)
         step += 1
-        setpoint = np.random.random()*1000
+        setpoint = 20
         state = env.reset(setpoint)
         action_before = agent.get_action(state)
         action = noise.get_action(action_before, step)
