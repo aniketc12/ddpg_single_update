@@ -83,6 +83,6 @@ class PidEnvSingle(gym.Env):
         print("Num steps required: "+str(len(self.history)))
         print("*************************")
         plt.plot(self.history)
-        plt.show()
         plt.xlabel('Time')
         plt.ylabel('Error')
+        plt.show()

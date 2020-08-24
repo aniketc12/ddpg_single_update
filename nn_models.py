@@ -32,7 +32,7 @@ class Actor(nn.Module):
 #        x = (self.output(x))
 #        return x
     def forward(self, state):
-        x = F.relu(self.linear1(state))
+        x = torch.tanh(self.linear1(state))
         x = torch.tanh(self.linear2(x))
-        x = (self.output(x))
+        x = torch.tanh(self.output(x))
         return x
